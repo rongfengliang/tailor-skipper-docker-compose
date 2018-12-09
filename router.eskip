@@ -1,0 +1,4 @@
+root: Path("/") ->setPath("/index")->compress("text/html")-> corsOrigin()
+     ->"http://web:8080";
+fragment_a: Path("/fragment-a") ->compress("text/html")-> corsOrigin()
+     ->setRequestHeader("TOKEN","dalongdemo")->"http://fragment-a:8081";

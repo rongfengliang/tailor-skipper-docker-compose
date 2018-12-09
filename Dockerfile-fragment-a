@@ -1,0 +1,5 @@
+FROM node:9
+WORKDIR /app
+COPY fragment-a/* /app/
+EXPOSE 8081
+CMD [ "yarn","start" ]

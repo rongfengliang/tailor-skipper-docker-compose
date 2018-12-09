@@ -1,0 +1,12 @@
+{
+  "name": "basic-demo",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "node-tailor": "^3.9.2"
+  },
+  "scripts": {
+    "start":"node index"
+  }
+}

@@ -1,0 +1,22 @@
+version: "3"
+services:
+  skipper:
+    image: dalongrong/skipper:latest
+    ports:
+    - "9090:9090"
+    - "9911:9911"
+    volumes:
+    - "./router.eskip:/router.eskip"
+    command: skipper -enable-ratelimits -enable-prometheus-metrics -routes-file /router.eskip
+  web:
+    build: 
+      context: ./
+      dockerfile: Dockerfile
+    ports:
+    - "8080:8080"
+  fragment-a:
+    build: 
+      context: ./
+      dockerfile: Dockerfile-fragment-a
+    ports:
+    - "8081:8081"
