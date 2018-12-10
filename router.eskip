@@ -4,3 +4,6 @@ fragment_a: Path("/fragment-a") ->compress("text/html")-> corsOrigin()
      ->"http://fragment-a:8081";
 fragment_b: Path("/fragment-b") ->compress("text/html")-> corsOrigin()
      ->"http://fragment-b:8082";
+
+fragment_c: Path("/user") ->compress("text/html")-> corsOrigin()
+     ->"http://web:8080";
