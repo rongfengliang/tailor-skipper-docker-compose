@@ -20,3 +20,9 @@ services:
       dockerfile: Dockerfile-fragment-a
     ports:
     - "8081:8081"
+  fragment-b:
+    build: 
+      context: ./
+      dockerfile: Dockerfile-fragment-b
+    ports:
+    - "8082:8082"

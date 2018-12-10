@@ -2,3 +2,5 @@ root: Path("/") ->setPath("/index")->compress("text/html")-> corsOrigin()
     ->setResponseHeader("TOKEN","dalongdemo") ->"http://web:8080";
 fragment_a: Path("/fragment-a") ->compress("text/html")-> corsOrigin()
      ->"http://fragment-a:8081";
+fragment_b: Path("/fragment-b") ->compress("text/html")-> corsOrigin()
+     ->"http://fragment-b:8082";
