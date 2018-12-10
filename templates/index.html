@@ -1,9 +1,8 @@
 <!-- Tailor needs an index.html -->
-<h1>dalong demo</h1>
+<meta slot="head" charset="utf-8">
+<script slot="body-start" src="http://blah"></script>
+<title slot="head">dalongrong demo</title>
 <p>fragment a</p>
-
-<fragment primary id="fragment-1" src="http://skipper:9090/fragment-a"></fragment>
-
+<fragment src="http://skipper:9090/fragment-a" primary ></fragment>
 <p>fragment b</p>
-<fragment primary id="fragment-2" src="http://skipper:9090/fragment-b"></fragment>
-
+<fragment src="http://skipper:9090/fragment-b" async primary ></fragment>

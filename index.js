@@ -1,8 +1,16 @@
 'use strict';
 const http = require('http');
 const Tailor = require('node-tailor');
+const fetchTemplate = require('node-tailor/lib/fetch-template');
+
+const path = require("path")
+const baseTemplateFn = () => 'base-template';
 const tailor = new Tailor({
-    templatesPath: './templates'
+   // templatesPath: './templates',
+    fetchTemplate: fetchTemplate(
+        path.join(__dirname, 'templates'),
+        baseTemplateFn
+    )
 });
 
 // Root Server
