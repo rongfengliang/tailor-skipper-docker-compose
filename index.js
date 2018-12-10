@@ -16,6 +16,8 @@ const tailor = new Tailor({
 // Root Server
 http
     .createServer((req, res) => {
+        req.headers['x-request-uri'] = req.url
+        req.url = '/index'
         tailor.requestHandler(req, res);
     })
     .listen(8080, function() {
